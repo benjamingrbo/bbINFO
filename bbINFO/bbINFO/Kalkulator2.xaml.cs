@@ -13,41 +13,97 @@ namespace bbINFO
     public partial class Kalkulator2 : ContentPage
     {
         public static List<Gorivo> vrsteGoriva;
-        public static List<snagaMotora> snagaMotora;
+        public static List<snagaMotora> snagaMotoraLista;
+        public static List<premija> premijskiRazred;
+        public putnickoVozilo putnickoVoziloZaRegistraciju;
+        public dodatneOpcije dodatneOpcije1;
+
+
         public Kalkulator2(putnickoVozilo vozilo)
         {
+            putnickoVoziloZaRegistraciju = vozilo;
+
             InitializeComponent();
             vrsteGoriva = new List<Gorivo>();
-            snagaMotora = new List<snagaMotora>();
+            snagaMotoraLista = new List<snagaMotora>();
+            premijskiRazred = new List<premija>();
+            dodatneOpcije1 = new dodatneOpcije();
 
 
-            Gorivo benzin = new Gorivo(1, "Benzin");
-            Gorivo dizel = new Gorivo(2, "Dizel");
-            Gorivo plin = new Gorivo(3, "Plin");
 
 
-            snagaMotora.Add(new snagaMotora(1, "Manje od 22 kW"));
-            snagaMotora.Add(new snagaMotora(2, "22kW - 33kW"));
-            snagaMotora.Add(new snagaMotora(3, "34kW - 44kW"));
-            snagaMotora.Add(new snagaMotora(4, "45kW - 55kW"));
-            snagaMotora.Add(new snagaMotora(5, "56kW - 66kW"));
-            snagaMotora.Add(new snagaMotora(6, "67kW - 70kW"));
-            snagaMotora.Add(new snagaMotora(7, "71kW - 84kW"));
-            snagaMotora.Add(new snagaMotora(8, "85kW - 100kW"));
-            snagaMotora.Add(new snagaMotora(9, "101kW - 110kW"));
-            snagaMotora.Add(new snagaMotora(10, "111kW - 130kW"));
-            snagaMotora.Add(new snagaMotora(11, "Više od 130kW"));
-
-            vrsteGoriva.Add(benzin);
-            vrsteGoriva.Add(dizel);
-            vrsteGoriva.Add(plin);
 
 
-            pickerSnage.ItemsSource = snagaMotora;
+            vrsteGoriva.Add(new Gorivo(1, "Benzin"));
+            vrsteGoriva.Add(new Gorivo(2, "Dizel"));
+            vrsteGoriva.Add(new Gorivo(3, "Plin"));
+
+
+
+
+            snagaMotoraLista.Add(new snagaMotora(1, "Manje od 22 kW"));
+            snagaMotoraLista.Add(new snagaMotora(2, "22kW - 33kW"));
+            snagaMotoraLista.Add(new snagaMotora(3, "34kW - 44kW"));
+            snagaMotoraLista.Add(new snagaMotora(4, "45kW - 55kW"));
+            snagaMotoraLista.Add(new snagaMotora(5, "56kW - 66kW"));
+            snagaMotoraLista.Add(new snagaMotora(6, "67kW - 70kW"));
+            snagaMotoraLista.Add(new snagaMotora(7, "71kW - 84kW"));
+            snagaMotoraLista.Add(new snagaMotora(8, "85kW - 100kW"));
+            snagaMotoraLista.Add(new snagaMotora(9, "101kW - 110kW"));
+            snagaMotoraLista.Add(new snagaMotora(10, "111kW - 130kW"));
+            snagaMotoraLista.Add(new snagaMotora(11, "Više od 130kW"));
+
+            premijskiRazred.Add(new premija(0, 0.0, "0%"));
+            premijskiRazred.Add(new premija(1, 0.1, "10%"));
+            premijskiRazred.Add(new premija(2, 0.2, "20%"));
+            premijskiRazred.Add(new premija(3, 0.3, "30%"));
+            premijskiRazred.Add(new premija(4, 0.4, "40%"));
+            premijskiRazred.Add(new premija(5, 0.5, "50%"));
+
+
+
+
+
+
+            pickerSnage.ItemsSource = snagaMotoraLista;
             pickerGoriva.ItemsSource = vrsteGoriva;
+            pickerPremije.ItemsSource = premijskiRazred;
+
 
 
         }
+
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+
+            putnickoVoziloZaRegistraciju.GodinaProizvodnje = int.Parse(godinaProizvodnjeEntry.Text);
+            putnickoVoziloZaRegistraciju.Zapremina = int.Parse(zapreminaMotoraEntry.Text);
+            putnickoVoziloZaRegistraciju.Snaga = pickerSnage.SelectedIndex;
+            putnickoVoziloZaRegistraciju.VrstaGoriva = pickerGoriva.SelectedIndex;
+            putnickoVoziloZaRegistraciju.Premija = pickerPremije.SelectedIndex;
+
+            dodatneOpcije1.zeleniKarton = switchZeleniKarton.IsToggled;
+            dodatneOpcije1.registarskeTablice = switchNoveRegistarskeTablice.IsToggled;
+            dodatneOpcije1.potvrdaORegistraciji = switchPotvrdaORegistraciji.IsToggled;
+            dodatneOpcije1.potvrdaOVlasnistvu = switchPotvrdaOVlasnistvu.IsToggled;
+            dodatneOpcije1.popustZaInvalide = switchPopustZaInvalide.IsToggled;
+            dodatneOpcije1.taxiVozilo = switchTaxiVozilo.IsToggled;
+            dodatneOpcije1.BrojPutnika = int.Parse(brojPutnika.Text);
+            dodatneOpcije1.izgubljeneTablice = switchIzgubljeneTablice.IsToggled;
+
+
+
+
+
+            await Navigation.PushAsync(new Kalkulator3(putnickoVoziloZaRegistraciju, dodatneOpcije1));
+
+
+
+
+
+
+        }
+
     }
 
     public class Gorivo
@@ -100,5 +156,119 @@ namespace bbINFO
             get { return this._raspon; }
             set { this._raspon = value; }
         }
+    }
+
+    public class premija
+    {
+        private int _id;
+        private double _postotak;
+        private string _postotakZaIspis;
+
+        public premija(int uneseniId, double uneseniPostotak, string uneseniPostotakZaIspis)
+        {
+            this._id = uneseniId;
+            this._postotak = uneseniPostotak;
+            this._postotakZaIspis = uneseniPostotakZaIspis;
+
+        }
+
+        public int Id
+        {
+            get { return this._id; }
+            set { this._id = value; }
+        }
+
+        public double Postotak
+        {
+            get { return this._postotak; }
+            set { this._postotak = value; }
+        }
+
+        public string PostotakZaIspis
+        {
+            get { return this._postotakZaIspis; }
+            set { this._postotakZaIspis = value; }
+        }
+
+
+    }
+
+
+    public class dodatneOpcije
+    {
+        private bool _zeleniKarton;
+        private bool _registarskeTablice;
+        private bool _potvrdaOVlasnistvu;
+        private bool _potvrdaORegistraciji;
+        private bool _popustZaInvalide;
+        private bool _taxiVozilo;
+        private int _brojPutnika;
+        private bool _izgubljeneTablice;
+
+
+
+        public dodatneOpcije()
+        {
+            this._zeleniKarton = false;
+            this._registarskeTablice = false;
+            this._potvrdaOVlasnistvu = false;
+            this._brojPutnika = 0;
+            this._potvrdaORegistraciji = false;
+            this._taxiVozilo = false;
+            this._izgubljeneTablice = false;
+            this._popustZaInvalide = false;
+
+        }
+
+        public bool zeleniKarton
+        {
+            get { return this._zeleniKarton; }
+            set { this._zeleniKarton = value; }
+        }
+
+        public bool registarskeTablice
+        {
+            get { return this._registarskeTablice; }
+            set { this._registarskeTablice = value; }
+        }
+
+        public bool potvrdaOVlasnistvu
+        {
+            get { return this._potvrdaOVlasnistvu;}
+            set { this._potvrdaOVlasnistvu = value; }
+        }
+
+        public int BrojPutnika
+        {
+            get { return this._brojPutnika;}
+            set { this._brojPutnika = value; }
+        }
+
+        public bool potvrdaORegistraciji
+        {
+            get { return this._potvrdaORegistraciji;}
+            set { this._potvrdaORegistraciji = value; }
+        }
+
+        public bool taxiVozilo
+        {
+            get { return this._taxiVozilo; }
+            set { this._taxiVozilo = value; }
+        }
+
+        public bool izgubljeneTablice
+        {
+            get { return this._izgubljeneTablice;}
+            set { this._izgubljeneTablice = value; }
+        }
+
+        public bool popustZaInvalide
+        {
+            get { return this._popustZaInvalide;}
+            set { this._popustZaInvalide = value; }
+        }
+
+
+
     }
 }

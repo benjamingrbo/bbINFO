@@ -33,6 +33,7 @@ namespace bbINFO
         private int _zapremina;
         private int _snaga;
         private int _vrstaGoriva;
+        private int _premija;
 
         public putnickoVozilo()
         {
@@ -40,6 +41,7 @@ namespace bbINFO
             this._zapremina = 0;
             this._snaga = 0;
             this._vrstaGoriva = 0;
+            this._premija = 0;
         }
 
 
@@ -64,7 +66,13 @@ namespace bbINFO
         public int VrstaGoriva
         {
             get { return _vrstaGoriva; }
-            set { this.VrstaGoriva = value; }
+            set { this._vrstaGoriva = value; }
+        }
+
+        public int Premija
+        {
+            get { return _premija; }
+            set { this._premija = value; }
         }
 
 
