@@ -4,7 +4,10 @@
              x:Class="bbINFO.Kalkulator3">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="zapreminaIspis"/>
+            <Label x:Name="polisaIspis"/>
+            <Label x:Name="bihamkIspis"/>
+            <Label x:Name="vodoprivredaIspis"/>
+            <Label x:Name="porezIspis"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

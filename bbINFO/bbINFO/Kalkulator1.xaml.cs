@@ -34,14 +34,16 @@ namespace bbINFO
         private int _snaga;
         private int _vrstaGoriva;
         private int _premija;
+        private int _vrstaRegistracije;
 
         public putnickoVozilo()
         {
             this._godinaProizvodnje = 0;
             this._zapremina = 0;
-            this._snaga = 0;
-            this._vrstaGoriva = 0;
-            this._premija = 0;
+            this._snaga = 100;
+            this._vrstaGoriva = 100;
+            this._premija = 100;
+            this._vrstaRegistracije = 100;
         }
 
 
@@ -74,6 +76,14 @@ namespace bbINFO
             get { return _premija; }
             set { this._premija = value; }
         }
+
+        public int VrstaRegistracije
+        {
+            get { return _vrstaRegistracije; }
+            set { this._vrstaRegistracije = value; }
+        }
+
+
 
 
     }

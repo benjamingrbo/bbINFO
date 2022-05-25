@@ -17,6 +17,7 @@ namespace bbINFO
         public static List<premija> premijskiRazred;
         public putnickoVozilo putnickoVoziloZaRegistraciju;
         public dodatneOpcije dodatneOpcije1;
+        public static List<vrstaRegistrovanja> vrstaRegistrovanjaLista;
 
 
         public Kalkulator2(putnickoVozilo vozilo)
@@ -28,6 +29,7 @@ namespace bbINFO
             snagaMotoraLista = new List<snagaMotora>();
             premijskiRazred = new List<premija>();
             dodatneOpcije1 = new dodatneOpcije();
+            vrstaRegistrovanjaLista = new List<vrstaRegistrovanja>();
 
 
 
@@ -41,17 +43,14 @@ namespace bbINFO
 
 
 
-            snagaMotoraLista.Add(new snagaMotora(1, "Manje od 22 kW"));
+            snagaMotoraLista.Add(new snagaMotora(1, "Do 22kW"));
             snagaMotoraLista.Add(new snagaMotora(2, "22kW - 33kW"));
             snagaMotoraLista.Add(new snagaMotora(3, "34kW - 44kW"));
             snagaMotoraLista.Add(new snagaMotora(4, "45kW - 55kW"));
             snagaMotoraLista.Add(new snagaMotora(5, "56kW - 66kW"));
-            snagaMotoraLista.Add(new snagaMotora(6, "67kW - 70kW"));
-            snagaMotoraLista.Add(new snagaMotora(7, "71kW - 84kW"));
-            snagaMotoraLista.Add(new snagaMotora(8, "85kW - 100kW"));
-            snagaMotoraLista.Add(new snagaMotora(9, "101kW - 110kW"));
-            snagaMotoraLista.Add(new snagaMotora(10, "111kW - 130kW"));
-            snagaMotoraLista.Add(new snagaMotora(11, "Više od 130kW"));
+            snagaMotoraLista.Add(new snagaMotora(6, "67kW - 84kW"));
+            snagaMotoraLista.Add(new snagaMotora(7, "85kW - 110kW"));
+            snagaMotoraLista.Add(new snagaMotora(8, "Preko 110kW"));
 
             premijskiRazred.Add(new premija(0, 0.0, "0%"));
             premijskiRazred.Add(new premija(1, 0.1, "10%"));
@@ -61,6 +60,11 @@ namespace bbINFO
             premijskiRazred.Add(new premija(5, 0.5, "50%"));
 
 
+            vrstaRegistrovanjaLista.Add(new vrstaRegistrovanja(0, "Prva registracija"));
+            vrstaRegistrovanjaLista.Add(new vrstaRegistrovanja(1, "Produženje registracije"));
+            vrstaRegistrovanjaLista.Add(new vrstaRegistrovanja(2, "Promjena vlasništva"));
+
+
 
 
 
@@ -68,12 +72,14 @@ namespace bbINFO
             pickerSnage.ItemsSource = snagaMotoraLista;
             pickerGoriva.ItemsSource = vrsteGoriva;
             pickerPremije.ItemsSource = premijskiRazred;
+            pickerVrsteRegistrovanja.ItemsSource = vrstaRegistrovanjaLista;
 
 
 
         }
 
         async private void Button_Clicked(object sender, EventArgs e)
+
         {
 
             putnickoVoziloZaRegistraciju.GodinaProizvodnje = int.Parse(godinaProizvodnjeEntry.Text);
@@ -81,6 +87,9 @@ namespace bbINFO
             putnickoVoziloZaRegistraciju.Snaga = pickerSnage.SelectedIndex;
             putnickoVoziloZaRegistraciju.VrstaGoriva = pickerGoriva.SelectedIndex;
             putnickoVoziloZaRegistraciju.Premija = pickerPremije.SelectedIndex;
+            putnickoVoziloZaRegistraciju.VrstaRegistracije = pickerVrsteRegistrovanja.SelectedIndex;
+
+
 
             dodatneOpcije1.zeleniKarton = switchZeleniKarton.IsToggled;
             dodatneOpcije1.registarskeTablice = switchNoveRegistarskeTablice.IsToggled;
@@ -234,19 +243,19 @@ namespace bbINFO
 
         public bool potvrdaOVlasnistvu
         {
-            get { return this._potvrdaOVlasnistvu;}
+            get { return this._potvrdaOVlasnistvu; }
             set { this._potvrdaOVlasnistvu = value; }
         }
 
         public int BrojPutnika
         {
-            get { return this._brojPutnika;}
+            get { return this._brojPutnika; }
             set { this._brojPutnika = value; }
         }
 
         public bool potvrdaORegistraciji
         {
-            get { return this._potvrdaORegistraciji;}
+            get { return this._potvrdaORegistraciji; }
             set { this._potvrdaORegistraciji = value; }
         }
 
@@ -258,17 +267,44 @@ namespace bbINFO
 
         public bool izgubljeneTablice
         {
-            get { return this._izgubljeneTablice;}
+            get { return this._izgubljeneTablice; }
             set { this._izgubljeneTablice = value; }
         }
 
         public bool popustZaInvalide
         {
-            get { return this._popustZaInvalide;}
+            get { return this._popustZaInvalide; }
             set { this._popustZaInvalide = value; }
         }
 
 
 
+    }
+
+
+    public class vrstaRegistrovanja
+    {
+        private int _id;
+        private string _vrsta;
+
+        public vrstaRegistrovanja(int uneseniId, string unesenaVrsta)
+        {
+            _id = uneseniId;
+            _vrsta = unesenaVrsta;
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+
+        }
+
+
+        public string Vrsta
+        {
+            get { return _vrsta; }
+            set { _vrsta = value; }
+        }
     }
 }
