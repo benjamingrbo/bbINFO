@@ -96,21 +96,6 @@
 
             </Grid>
 
-            <!--
-            <TableView x:Name="table">
-                <TableRoot>
-                    <TableSection>
-                        <EntryCell Label="Broj sjedišta :" Placeholder="npr.5" />
-                        <SwitchCell Text="Zeleni karton" />
-                        <SwitchCell Text="Nove registarske tablice" On="true" />
-                        <SwitchCell Text="Izgubljene, uništene i nestale tablice" />
-                        <SwitchCell Text="Potvrda o vlasništvu"/>
-                        <SwitchCell Text="Potvrda o registraciji"/>
-                        <SwitchCell Text="Taxi vozilo +30%"/>
-                        <SwitchCell Text="Popust za invalide 10%"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>-->
 
             <Button Text="Izračunaj" Clicked="Button_Clicked"/>
 
