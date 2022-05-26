@@ -8,6 +8,16 @@
             <Label x:Name="bihamkIspis"/>
             <Label x:Name="vodoprivredaIspis"/>
             <Label x:Name="porezIspis"/>
+            <Label x:Name="putarinaIspis"/>
+            <Label x:Name="ekologijaIspis"/>
+            <Label x:Name="noveTabliceIspis"/>
+            <Label x:Name="izgubljeneTabliceIspis"/>
+            <Label x:Name="potvrdaORegistracijiIspis"/>
+            <Label x:Name="potvrdaOVlasnistvuIspis"/>
+            <Label x:Name="stikerIspis"/>
+            <Label x:Name="tehnickiPregledIspis"/>
+            <Label x:Name="taksaIspis"/>
+            <Label x:Name="ukupnaCijenaRegistracijeIspis"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

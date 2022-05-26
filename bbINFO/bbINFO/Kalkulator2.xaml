@@ -71,7 +71,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Broj sjedišta : " FontSize="16" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" />
-                <Entry Text="4" Placeholder="npr. 5" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="brojPutnika"/>
+                <Entry Text="5" Placeholder="npr. 5" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="brojPutnika"/>
 
                 <Label Text="Zeleni karton :"  FontSize="16" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" />
                 <Switch Grid.Row="1" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchZeleniKarton"/>
@@ -96,21 +96,6 @@
 
             </Grid>
 
-            <!--
-            <TableView x:Name="table">
-                <TableRoot>
-                    <TableSection>
-                        <EntryCell Label="Broj sjedišta :" Placeholder="npr.5" />
-                        <SwitchCell Text="Zeleni karton" />
-                        <SwitchCell Text="Nove registarske tablice" On="true" />
-                        <SwitchCell Text="Izgubljene, uništene i nestale tablice" />
-                        <SwitchCell Text="Potvrda o vlasništvu"/>
-                        <SwitchCell Text="Potvrda o registraciji"/>
-                        <SwitchCell Text="Taxi vozilo +30%"/>
-                        <SwitchCell Text="Popust za invalide 10%"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>-->
 
             <Button Text="Izračunaj" Clicked="Button_Clicked"/>
 
