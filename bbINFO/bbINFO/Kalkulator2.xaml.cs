@@ -99,6 +99,7 @@ namespace bbINFO
             dodatneOpcije1.taxiVozilo = switchTaxiVozilo.IsToggled;
             dodatneOpcije1.BrojPutnika = int.Parse(brojPutnika.Text);
             dodatneOpcije1.izgubljeneTablice = switchIzgubljeneTablice.IsToggled;
+            dodatneOpcije1.Terenac = switchTerenac.IsToggled;
 
 
 
@@ -213,6 +214,7 @@ namespace bbINFO
         private bool _taxiVozilo;
         private int _brojPutnika;
         private bool _izgubljeneTablice;
+        private bool _terenac;
 
 
 
@@ -275,6 +277,12 @@ namespace bbINFO
         {
             get { return this._popustZaInvalide; }
             set { this._popustZaInvalide = value; }
+        }
+
+        public bool Terenac
+        {
+            get { return this._terenac; }
+            set { this._terenac = value; }
         }
 
 

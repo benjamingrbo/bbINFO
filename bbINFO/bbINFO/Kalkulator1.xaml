@@ -14,7 +14,7 @@
                 </Grid.ColumnDefinitions>
 
                 <ImageButton Source="putnicka.png" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="5" BorderWidth="1" Padding="5" Clicked="ImageButton_Clicked"/>
-                <ImageButton Grid.Row="0" Grid.Column="1" Source="teretna.png" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="5" BorderWidth="1" Padding="5"/>
+                <ImageButton Grid.Row="0" Grid.Column="1" Source="motor.png" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="5" BorderWidth="1" Padding="5" Clicked="ImageButton_Clicked_1"/>
 
             </Grid>
         </StackLayout>
