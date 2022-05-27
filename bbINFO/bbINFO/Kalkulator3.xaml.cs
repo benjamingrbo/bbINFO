@@ -36,24 +36,26 @@ namespace bbINFO
             brojSjedista();
             taxi();
             invalidi();
+            zeleniKarton();
             ukupnaCijenaRegistracije();
   
              
 
-            polisaIspis.Text = registracijaPutnickogVozila.Polisa.ToString();
-            vodoprivredaIspis.Text = registracijaPutnickogVozila.Vodoprivreda.ToString();
-            bihamkIspis.Text = registracijaPutnickogVozila.Bihamk.ToString();
-            porezIspis.Text = registracijaPutnickogVozila.Porez.ToString();
-            putarinaIspis.Text = registracijaPutnickogVozila.Putarina.ToString();
-            ekologijaIspis.Text = registracijaPutnickogVozila.FondZaZastituOkolisa.ToString();
-            noveTabliceIspis.Text = registracijaPutnickogVozila.NoveTablice.ToString();
-            izgubljeneTabliceIspis.Text = registracijaPutnickogVozila.IzgubljeneTablice.ToString();
-            potvrdaORegistracijiIspis.Text = registracijaPutnickogVozila.PotvrdaORegistraciji.ToString();
-            potvrdaOVlasnistvuIspis.Text = registracijaPutnickogVozila.PotvrdaOVlasnistvu.ToString();
-            stikerIspis.Text = registracijaPutnickogVozila.Stiker.ToString();
-            tehnickiPregledIspis.Text = registracijaPutnickogVozila.TehnickiPregled.ToString();
-            taksaIspis.Text = registracijaPutnickogVozila.Taksa.ToString();
-            ukupnaCijenaRegistracijeIspis.Text = registracijaPutnickogVozila.UkupnaCijena.ToString();
+            polisaIspis.Text = registracijaPutnickogVozila.Polisa.ToString() + " KM";
+            vodoprivredaIspis.Text = registracijaPutnickogVozila.Vodoprivreda.ToString() + " KM";
+            bihamkIspis.Text = registracijaPutnickogVozila.Bihamk.ToString() + " KM";
+            porezIspis.Text = registracijaPutnickogVozila.Porez.ToString() + " KM";
+            putarinaIspis.Text = registracijaPutnickogVozila.Putarina.ToString() + " KM";
+            ekologijaIspis.Text = registracijaPutnickogVozila.FondZaZastituOkolisa.ToString() + " KM";
+            noveTabliceIspis.Text = registracijaPutnickogVozila.NoveTablice.ToString() + " KM";
+            izgubljeneTabliceIspis.Text = registracijaPutnickogVozila.IzgubljeneTablice.ToString() + " KM";
+            potvrdaORegistracijiIspis.Text = registracijaPutnickogVozila.PotvrdaORegistraciji.ToString() + " KM";
+            potvrdaOVlasnistvuIspis.Text = registracijaPutnickogVozila.PotvrdaOVlasnistvu.ToString() + " KM";
+            stikerIspis.Text = registracijaPutnickogVozila.Stiker.ToString() + " KM";
+            tehnickiPregledIspis.Text = registracijaPutnickogVozila.TehnickiPregled.ToString() + " KM";
+            taksaIspis.Text = registracijaPutnickogVozila.Taksa.ToString() + " KM";
+            zeleniKartonIspis.Text = registracijaPutnickogVozila.ZeleniKarton.ToString() + " KM";
+            ukupnaCijenaRegistracijeIspis.Text = registracijaPutnickogVozila.UkupnaCijena.ToString() + " KM";
 
             
 
@@ -345,10 +347,18 @@ namespace bbINFO
             }
 
 
-            if(voziloZaRegistraciju.VrstaGoriva == 2)
+
+            if(dodatneOpcijeZaReg.Terenac && voziloZaRegistraciju.VrstaGoriva == 2)
+            {
+                registracijaPutnickogVozila.Putarina += registracijaPutnickogVozila.Putarina * 0.45;
+            }else if(dodatneOpcijeZaReg.Terenac)
+            {
+                registracijaPutnickogVozila.Putarina += registracijaPutnickogVozila.Putarina * 0.2;
+            }else if(voziloZaRegistraciju.VrstaGoriva == 2)
             {
                 registracijaPutnickogVozila.Putarina = registracijaPutnickogVozila.Putarina + 0.25 * registracijaPutnickogVozila.Putarina;
             }
+
         }
 
 
@@ -537,7 +547,8 @@ namespace bbINFO
                 registracijaPutnickogVozila.PotvrdaOVlasnistvu +
                 registracijaPutnickogVozila.Stiker +
                 registracijaPutnickogVozila.TehnickiPregled +
-                registracijaPutnickogVozila.Taksa;
+                registracijaPutnickogVozila.Taksa +
+                registracijaPutnickogVozila.ZeleniKarton;
 
             registracijaPutnickogVozila.UkupnaCijena = ukupnaCijena;
         }
@@ -551,6 +562,8 @@ namespace bbINFO
         }
 
 
+
+
         public void invalidi()
         {
             if (dodatneOpcijeZaReg.popustZaInvalide)
@@ -559,6 +572,14 @@ namespace bbINFO
                 registracijaPutnickogVozila.Putarina = 0;
                 registracijaPutnickogVozila.Porez = 0;
 
+            }
+        }
+
+        public void zeleniKarton()
+        {
+            if (dodatneOpcijeZaReg.zeleniKarton)
+            {
+                registracijaPutnickogVozila.ZeleniKarton = 4;
             }
         }
 
@@ -584,6 +605,7 @@ namespace bbINFO
         private int _stiker;
         private int _tehnickiPregled;
         private int _taksa;
+        private int _zeleniKarton;
         private double _ukupnaCijena;
 
         public registracija()
@@ -676,6 +698,12 @@ namespace bbINFO
         {
             get { return _ukupnaCijena; }
             set { _ukupnaCijena = value; }
+        }
+
+        public int ZeleniKarton
+        {
+            get { return _zeleniKarton; }
+            set { _zeleniKarton = value; }
         }
 
 
