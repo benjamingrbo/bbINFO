@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="bbINFO.FlyoutPage1Flyout"
-             Title="Flyout">
+             Title="Flyout" BackgroundColor="#1E2D4A">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+                <Grid BackgroundColor="#ff003f">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -38,11 +38,11 @@
                     FontSize="24"/>-->
                             <Grid Padding="5,10">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="40"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding IconSource}"/>
-                                <Label Grid.Column="1" Text="{Binding Title}"></Label>
+                                <Label TextColor="White" Grid.Column="1" Text="{Binding Title}" VerticalOptions="CenterAndExpand" Margin="15,0,0,0"></Label>
                             </Grid>
             </StackLayout>
           </ViewCell>
