@@ -4,7 +4,15 @@
              x:Class="bbINFO.Tehnicki1">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Prva stranica tehnicki"/>
+            <ListView x:Name="GradoviView"
+                ItemsSource="{Binding listaGradova}"
+                      ItemSelected="GradoviView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Naziv}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
