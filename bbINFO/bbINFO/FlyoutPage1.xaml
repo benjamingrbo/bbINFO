@@ -7,8 +7,8 @@
     <pages:FlyoutPage1Flyout x:Name="FlyoutPage" />
   </FlyoutPage.Flyout>
   <FlyoutPage.Detail>
-    <NavigationPage>
-      <x:Arguments>
+        <NavigationPage BarBackgroundColor="#5561F9" BarTextColor="White">
+            <x:Arguments>
         <pages:FlyoutPage1Detail />
       </x:Arguments>
     </NavigationPage>

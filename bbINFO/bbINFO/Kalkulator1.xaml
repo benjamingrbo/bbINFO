@@ -4,19 +4,30 @@
              x:Class="bbINFO.Kalkulator1">
     <ContentPage.Content>
         <StackLayout>
-            <Grid Margin="50" ColumnSpacing="50">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Label Padding="0,10,0,0" Text="Izaberite vrstu motornog vozila" HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
+            <BoxView 
+                   HeightRequest="1"
+                   Color="#5561F9"
+                   Margin ="20, 0, 20, 0"/>
 
-                <ImageButton Source="putnicka.png" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="5" BorderWidth="1" Padding="5" Clicked="ImageButton_Clicked"/>
-                <ImageButton Grid.Row="0" Grid.Column="1" Source="motor.png" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="5" BorderWidth="1" Padding="5" Clicked="ImageButton_Clicked_1"/>
+
+            <Grid Margin="50" ColumnSpacing="50">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                <Frame Padding="5" BackgroundColor="Transparent"  OutlineColor="LightGray">
+                    <ImageButton Source="putnicka.png" BackgroundColor="Transparent"  Clicked="ImageButton_Clicked"/>
+                </Frame>
+                <Frame Padding="5" BackgroundColor="Transparent"  OutlineColor="LightGray" Grid.Row="0" Grid.Column="1">
+                    <ImageButton Source="motor.png" BackgroundColor="Transparent" Clicked="ImageButton_Clicked_1"/>
+                </Frame>
 
             </Grid>
-        </StackLayout>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

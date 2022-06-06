@@ -1,60 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="bbINFO.Kalkulator2">
+             x:Class="bbINFO.Kalkulator2"
+             BackgroundColor="#f0f2f4">
     <ContentPage.Content>
+  
         <ScrollView>
-            <StackLayout Padding="10">
+            <StackLayout Padding="12">
 
-            <Label Text="Podaci o vozilu" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="Podaci o vozilu" TextColor="Black" HorizontalOptions="CenterAndExpand" FontFamily="Roboto.ttf#Roboto"/>
             <BoxView 
                    HeightRequest="1"
-                   Color="#03A9F4"
+                   Color="#5561F9"
                    Margin ="20, 0, 20, 0"/>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
 
 
-                <Label Text="Godina proizvodnje : " FontSize="16" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" />
-                <Entry x:Name ="godinaProizvodnjeEntry" Text="" Placeholder="npr. 2020" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" Keyboard="Numeric"/>
+                    <Label Text="Godina proizvodnje : " FontSize="15" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto"/>
+                    <Entry x:Name ="godinaProizvodnjeEntry" Text="" Placeholder="npr. 2020" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" Keyboard="Numeric" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
-                <Label Text="Zapremina motora (ccm) :  "  FontSize="16" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" />
-                <Entry x:Name="zapreminaMotoraEntry" Text="" Placeholder="npr. 1600" Grid.Row="1" Grid.Column="1" Margin="0, 0, 5, 0"/>
+                    <Label Text="Zapremina motora (ccm) :  "  FontSize="15" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Entry x:Name="zapreminaMotoraEntry" Text="" Placeholder="npr. 1600" Grid.Row="1" Grid.Column="1" Margin="0, 0, 5, 0" Keyboard="Numeric" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
-                <Label Text="Snaga motora (kW) :"  FontSize="16" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" />
-                <Picker x:Name="pickerSnage" Title="Izaberite snagu" Grid.Row="2" Grid.Column="1" ItemDisplayBinding="{Binding Raspon}"/>
+                    <Label Text="Snaga motora (kW) :"  FontSize="15" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Picker x:Name="pickerSnage" Title="Izaberite snagu" Grid.Row="2" Grid.Column="1" ItemDisplayBinding="{Binding Raspon}" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
-                <Label Text="Vrsta goriva :"  FontSize="16" Grid.Row="3" Grid.Column="0" Margin="0,10,0,0" />
-                <Picker x:Name="pickerGoriva" Title="Izaberite vrstu goriva" Grid.Row="3" Grid.Column="1" ItemDisplayBinding="{Binding Naziv}"/>
+                    <Label Text="Vrsta goriva :"  FontSize="15" Grid.Row="3" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Picker x:Name="pickerGoriva" Title="Izaberite vrstu goriva" Grid.Row="3" Grid.Column="1" ItemDisplayBinding="{Binding Naziv}" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
-                <Label Text="Premijski postotak :"  FontSize="16" Grid.Row="4" Grid.Column="0" Margin="0,10,0,0" />
-                <Picker x:Name="pickerPremije" Title="Izaberite premiju" Grid.Row="4" Grid.Column="1" ItemDisplayBinding="{Binding PostotakZaIspis}"/>
+                    <Label Text="Premijski postotak :"  FontSize="15" Grid.Row="4" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Picker x:Name="pickerPremije" Title="Izaberite premiju" Grid.Row="4" Grid.Column="1" ItemDisplayBinding="{Binding PostotakZaIspis}" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
-                <Label Text="Vrsta registrovanja :"  FontSize="16" Grid.Row="5" Grid.Column="0" Margin="0,10,0,0" />
-                <Picker x:Name="pickerVrsteRegistrovanja" Title="Izaberite vrstu registrovanja" Grid.Row="5" Grid.Column="1" ItemDisplayBinding="{Binding Vrsta}"/>
+                    <Label Text="Vrsta registrovanja :"  FontSize="15" Grid.Row="5" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Picker x:Name="pickerVrsteRegistrovanja" Title="Izaberite vrstu registrovanja" Grid.Row="5" Grid.Column="1" ItemDisplayBinding="{Binding Vrsta}" TextColor="#5561F9" FontFamily="Roboto.ttf#Roboto" FontSize="15"/>
 
 
-            </Grid>
+                </Grid>
 
-            <Label Text="Dodatne opcije" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
-            <BoxView 
+                <Label Text="Dodatne opcije" TextColor="Black" HorizontalOptions="CenterAndExpand" FontFamily="Roboto.ttf#Roboto"/>
+                <BoxView 
                    HeightRequest="1"
-                   Color="#03A9F4"
+                   Color="#5561F9"
                    Margin ="20, 0, 20, 0"/>
 
-            <Grid>
+                <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -72,38 +75,46 @@
                     <ColumnDefinition Width="175" />
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Broj sjedišta : " FontSize="16" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" />
-                <Entry Text="5" Placeholder="npr. 5" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="brojPutnika"/>
+                    <Label Text="Broj sjedišta : " FontSize="15" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
+                    <Entry Text="5" Placeholder="npr. 5" Grid.Row="0" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="brojPutnika" Keyboard="Numeric" FontFamily="Roboto.ttf#Roboto" FontSize="15" TextColor="#5561F9"/>
 
-                <Label Text="Zeleni karton :"  FontSize="16" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Zeleni karton :"  FontSize="15" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="1" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchZeleniKarton"/>
 
-                <Label Text="Nove registarske tablice" FontSize="16" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Nove registarske tablice" FontSize="15" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="2" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchNoveRegistarskeTablice"/>
 
-                <Label Text="Izgubljene, uništene i nestale tablice" FontSize="16" Grid.Row="3" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Izgubljene, uništene i nestale tablice" FontSize="15" Grid.Row="3" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="3" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchIzgubljeneTablice"/>
 
-                <Label Text="Potvrda o vlasništvu" FontSize="16" Grid.Row="4" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Potvrda o vlasništvu" FontSize="15" Grid.Row="4" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="4" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchPotvrdaOVlasnistvu"/>
 
-                <Label Text="Potvrda o registraciji" FontSize="16" Grid.Row="5" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Potvrda o registraciji" FontSize="15" Grid.Row="5" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="5" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchPotvrdaORegistraciji"/>
 
-                <Label Text="Taxi vozilo" FontSize="16" Grid.Row="6" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Taxi vozilo" FontSize="15" Grid.Row="6" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="6" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchTaxiVozilo"/>
 
-                <Label Text="Terenac" FontSize="16" Grid.Row="7" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Terenac" FontSize="15" Grid.Row="7" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="7" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchTerenac"/>
 
-                <Label Text="Popust za invalide/RVI" FontSize="16" Grid.Row="8" Grid.Column="0" Margin="0,10,0,0" />
+                    <Label Text="Popust za invalide/RVI" FontSize="15" Grid.Row="8" Grid.Column="0" Margin="0,10,0,0" FontFamily="Roboto.ttf#Roboto" />
                 <Switch Grid.Row="8" Grid.Column="1" Margin="0, 0, 5, 0" x:Name="switchPopustZaInvalide"/>
 
 
                 </Grid>
 
 
-            <Button Text="Izračunaj" Clicked="Button_Clicked"/>
+            <Button 
+                Text="Izračunaj" 
+                Clicked="Button_Clicked"
+                BorderWidth="1"
+                BorderColor="#FF4500"
+                BackgroundColor="#FF4500"
+                CornerRadius="8"
+                TextColor="White"
+                Margin="0,10,0,0"/>
 
 
 
