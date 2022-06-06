@@ -4,27 +4,27 @@
              xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="bbINFO.Osiguranja2">
     <StackLayout>
-        <Label Text="Izaberite osiguravajuću kuću" TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="0,5,0,0"/>
+        <Label Padding="0,10,0,0" Text="Izaberite osiguravajuću kuću" HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
         <BoxView 
                    HeightRequest="1"
-                   Color="#03A9F4"
+                   Color="#5561F9"
                    Margin ="20, 0, 20, 0"/>
         <ListView  x:Name="osiguravajuceKuceView" RowHeight="75" SeparatorVisibility="None" ItemSelected="osiguravajuceKuceView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal"  Padding="5" >
-                                    <Image Source="{Binding Slika}" HeightRequest="65" WidthRequest="80" VerticalOptions="Center" />
+                        <StackLayout BackgroundColor="#f5f5f5"
+                        Orientation="Vertical" Margin="0,5,0,5">
+                            <StackLayout Orientation="Horizontal"  Padding="10,1,0,15" Margin="0">
+                                    <Image Source="{Binding Slika}" HeightRequest="60" WidthRequest="80" VerticalOptions="CenterAndExpand" />
                                     <Label Padding="5">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="{Binding Naziv}" FontAttributes="Bold" />
+                                            <Span Text="{Binding Naziv}" FontFamily="Roboto.ttf#Roboto" TextColor="Black" />
                                                 <Span Text="{x:Static system:Environment.NewLine}"/>
-                                                <Span Text="{Binding Adresa}" />
+                                            <Span Text="{Binding Adresa}" FontFamily="Roboto.ttf#Roboto" FontSize="12" />
                                                 <Span Text="{x:Static system:Environment.NewLine}"/>
-                                                <Span Text="{Binding BrojTelefona}" />
+                                            <Span Text="{Binding BrojTelefona}" FontFamily="Roboto.ttf#Roboto" FontSize="12" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>

@@ -127,7 +127,7 @@
 
 
                 <Label Text="UKUPNO" FontSize="16" FontFamily="Roboto.ttf#Roboto" FontAttributes="Bold" Grid.Row="28" Grid.Column="0" Padding="5,0,0,0" TextColor="Black"/>
-                <Label x:Name="ukupnaCijenaRegistracijeIspis" FontSize="18" FontAttributes="Bold" Grid.Row="28" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0" FontFamily="Roboto.ttf#Roboto"/>
+                <Label x:Name="ukupnaCijenaRegistracijeIspis" FontSize="18" FontAttributes="Bold" Grid.Row="28" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0" FontFamily="Roboto.ttf#Roboto" TextColor="Black"/>
 
 
             </Grid>

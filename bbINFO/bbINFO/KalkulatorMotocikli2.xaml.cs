@@ -34,21 +34,21 @@ namespace bbINFO
             zeleniKartonZaMotocikl();
             ukupnaCijena();
 
-            polisaIspis.Text = registracijaMotocikla.Polisa.ToString();
-            vodoprivreda.Text = registracijaMotocikla.Vodoprivreda.ToString();
-            bihamkIspis.Text = registracijaMotocikla.Bihamk.ToString();
-            porezIspis.Text = registracijaMotocikla.Porez.ToString();
-            putarinaIspis.Text = registracijaMotocikla.Putarina.ToString();
-            okolisIspis.Text = registracijaMotocikla.FondZaZastituOkolisa.ToString();
-            noveTabliceIspis.Text = registracijaMotocikla.NoveTablice.ToString();
-            izgubljeneTabliceIspis.Text = registracijaMotocikla.IzgubljeneTablice.ToString();
-            potvrdaORegistracijiIspis.Text = registracijaMotocikla.PotvrdaORegistraciji.ToString();
-            potvrdaOVlasnistvuIspis.Text = registracijaMotocikla.PotvrdaOVlasnistvu.ToString();
-            stikerIspis.Text = registracijaMotocikla.Stiker.ToString();
-            tehnickiIspis.Text = registracijaMotocikla.TehnickiPregled.ToString();
-            taksaIspis.Text = registracijaMotocikla.Taksa.ToString();
-            zeleniKartonIspis.Text = registracijaMotocikla.ZeleniKarton.ToString();
-            ukupnaIspis.Text = registracijaMotocikla.UkupnaCijena.ToString();
+            polisaIspis.Text = registracijaMotocikla.Polisa.ToString() + " KM";
+            vodoprivreda.Text = registracijaMotocikla.Vodoprivreda.ToString() + " KM";
+            bihamkIspis.Text = registracijaMotocikla.Bihamk.ToString() + " KM";
+            porezIspis.Text = registracijaMotocikla.Porez.ToString() + " KM";
+            putarinaIspis.Text = registracijaMotocikla.Putarina.ToString() + " KM";
+            okolisIspis.Text = registracijaMotocikla.FondZaZastituOkolisa.ToString() + " KM";
+            noveTabliceIspis.Text = registracijaMotocikla.NoveTablice.ToString() + " KM";
+            izgubljeneTabliceIspis.Text = registracijaMotocikla.IzgubljeneTablice.ToString() + " KM";
+            potvrdaORegistracijiIspis.Text = registracijaMotocikla.PotvrdaORegistraciji.ToString() + " KM";
+            potvrdaOVlasnistvuIspis.Text = registracijaMotocikla.PotvrdaOVlasnistvu.ToString() + " KM";
+            stikerIspis.Text = registracijaMotocikla.Stiker.ToString() + " KM";
+            tehnickiIspis.Text = registracijaMotocikla.TehnickiPregled.ToString() + " KM";
+            taksaIspis.Text = registracijaMotocikla.Taksa.ToString() + " KM";
+            zeleniKartonIspis.Text = registracijaMotocikla.ZeleniKarton.ToString() + " KM";
+            ukupnaIspis.Text = registracijaMotocikla.UkupnaCijena.ToString() + " KM";
             
             
 

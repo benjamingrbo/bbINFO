@@ -11,9 +11,9 @@
                    BackgroundColor="Transparent">
                 <Image x:Name="slika" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="300" WidthRequest="500" Aspect="AspectFill"/>
             </Frame>
-            <Label x:Name="naziv" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold" CharacterSpacing="0.5" Margin="0,15,0,0"/>
-            <Label x:Name="adresa" Text="Adresa: " HorizontalOptions="CenterAndExpand" FontSize="Body"/>
-            <Label x:Name="brojTelefona" Text="Broj telefona: " HorizontalOptions="CenterAndExpand" FontSize="Body"/>
+            <Label x:Name="naziv" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold" CharacterSpacing="0.5" Margin="0,15,0,0" FontFamily="Roboto.ttf#Roboto"/>
+            <Label x:Name="adresa" Text="Adresa: " HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
+            <Label x:Name="brojTelefona" Text="Broj telefona: " HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
             <Grid Margin="0,50,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition/>

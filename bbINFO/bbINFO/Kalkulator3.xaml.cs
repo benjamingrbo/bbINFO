@@ -499,7 +499,7 @@ namespace bbINFO
         {
             if(voziloZaRegistraciju.VrstaGoriva == 0)
             {
-                registracijaPutnickogVozila.TehnickiPregled += 22;
+                registracijaPutnickogVozila.TehnickiPregled += 32;
             }else if(voziloZaRegistraciju.VrstaGoriva == 1)
             {
                 registracijaPutnickogVozila.TehnickiPregled += 36;
