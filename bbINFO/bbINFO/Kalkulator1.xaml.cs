@@ -17,7 +17,7 @@ namespace bbINFO
         public Kalkulator1()
         {
             InitializeComponent();
-            
+
         }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
