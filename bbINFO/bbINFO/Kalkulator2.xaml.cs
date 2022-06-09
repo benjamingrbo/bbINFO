@@ -81,31 +81,38 @@ namespace bbINFO
         async private void Button_Clicked(object sender, EventArgs e)
 
         {
+            try
+            {
 
-            putnickoVoziloZaRegistraciju.GodinaProizvodnje = int.Parse(godinaProizvodnjeEntry.Text);
-            putnickoVoziloZaRegistraciju.Zapremina = int.Parse(zapreminaMotoraEntry.Text);
-            putnickoVoziloZaRegistraciju.Snaga = pickerSnage.SelectedIndex;
-            putnickoVoziloZaRegistraciju.VrstaGoriva = pickerGoriva.SelectedIndex;
-            putnickoVoziloZaRegistraciju.Premija = pickerPremije.SelectedIndex;
-            putnickoVoziloZaRegistraciju.VrstaRegistracije = pickerVrsteRegistrovanja.SelectedIndex;
-
-
-
-            dodatneOpcije1.zeleniKarton = switchZeleniKarton.IsToggled;
-            dodatneOpcije1.registarskeTablice = switchNoveRegistarskeTablice.IsToggled;
-            dodatneOpcije1.potvrdaORegistraciji = switchPotvrdaORegistraciji.IsToggled;
-            dodatneOpcije1.potvrdaOVlasnistvu = switchPotvrdaOVlasnistvu.IsToggled;
-            dodatneOpcije1.popustZaInvalide = switchPopustZaInvalide.IsToggled;
-            dodatneOpcije1.taxiVozilo = switchTaxiVozilo.IsToggled;
-            dodatneOpcije1.BrojPutnika = int.Parse(brojPutnika.Text);
-            dodatneOpcije1.izgubljeneTablice = switchIzgubljeneTablice.IsToggled;
-            dodatneOpcije1.Terenac = switchTerenac.IsToggled;
+                putnickoVoziloZaRegistraciju.GodinaProizvodnje = int.Parse(godinaProizvodnjeEntry.Text);
+                putnickoVoziloZaRegistraciju.Zapremina = int.Parse(zapreminaMotoraEntry.Text);
+                putnickoVoziloZaRegistraciju.Snaga = pickerSnage.SelectedIndex;
+                putnickoVoziloZaRegistraciju.VrstaGoriva = pickerGoriva.SelectedIndex;
+                putnickoVoziloZaRegistraciju.Premija = pickerPremije.SelectedIndex;
+                putnickoVoziloZaRegistraciju.VrstaRegistracije = pickerVrsteRegistrovanja.SelectedIndex;
 
 
 
+                dodatneOpcije1.zeleniKarton = switchZeleniKarton.IsToggled;
+                dodatneOpcije1.registarskeTablice = switchNoveRegistarskeTablice.IsToggled;
+                dodatneOpcije1.potvrdaORegistraciji = switchPotvrdaORegistraciji.IsToggled;
+                dodatneOpcije1.potvrdaOVlasnistvu = switchPotvrdaOVlasnistvu.IsToggled;
+                dodatneOpcije1.popustZaInvalide = switchPopustZaInvalide.IsToggled;
+                dodatneOpcije1.taxiVozilo = switchTaxiVozilo.IsToggled;
+                dodatneOpcije1.BrojPutnika = int.Parse(brojPutnika.Text);
+                dodatneOpcije1.izgubljeneTablice = switchIzgubljeneTablice.IsToggled;
+                dodatneOpcije1.Terenac = switchTerenac.IsToggled;
 
 
-            await Navigation.PushAsync(new Kalkulator3(putnickoVoziloZaRegistraciju, dodatneOpcije1));
+
+
+
+                await Navigation.PushAsync(new Kalkulator3(putnickoVoziloZaRegistraciju, dodatneOpcije1));
+            }
+            catch
+            {
+                await DisplayAlert("Upozorenje", "Sva polja moraju biti ispunjena!", "OK");
+            }
 
 
 
