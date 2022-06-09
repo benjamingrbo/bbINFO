@@ -72,21 +72,27 @@ namespace bbINFO
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            motocikl1.Zapremina = pickerZapremine.SelectedIndex;
-            motocikl1.GodinaProizvodnje = int.Parse(godinaProizvodnjeMotocikla.Text);
-            motocikl1.Kategorija = pickerKategorije.SelectedIndex;
-            motocikl1.VrstaMotora = pickerVrsteMotora.SelectedIndex;
-            motocikl1.Premija = pickerPremijeMotocikla.SelectedIndex;
-            motocikl1.VrstaRegistracije = pickerVrsteRegistrovanjaMotocikla.SelectedIndex;
+            try
+            {
+                motocikl1.Zapremina = pickerZapremine.SelectedIndex;
+                motocikl1.GodinaProizvodnje = int.Parse(godinaProizvodnjeMotocikla.Text);
+                motocikl1.Kategorija = pickerKategorije.SelectedIndex;
+                motocikl1.VrstaMotora = pickerVrsteMotora.SelectedIndex;
+                motocikl1.Premija = pickerPremijeMotocikla.SelectedIndex;
+                motocikl1.VrstaRegistracije = pickerVrsteRegistrovanjaMotocikla.SelectedIndex;
 
-            dodatneOpcijeZaRegMotocikla.zeleniKarton = switchZeleniKartonZaMotocikl.IsToggled;
-            dodatneOpcijeZaRegMotocikla.registarskeTablice = switchNoveRegistarskeTabliceZaMotocikl.IsToggled;
-            dodatneOpcijeZaRegMotocikla.potvrdaOVlasnistvu = switchPotvrdaOVlasnistvuZaMotocikl.IsToggled;
-            dodatneOpcijeZaRegMotocikla.potvrdaORegistraciji = switchPotvrdaORegistracijiZaMotocikl.IsToggled;
-            dodatneOpcijeZaRegMotocikla.izgubljeneTablice = switchIzgubljeneTabliceZaMotocikl.IsToggled;
+                dodatneOpcijeZaRegMotocikla.zeleniKarton = switchZeleniKartonZaMotocikl.IsToggled;
+                dodatneOpcijeZaRegMotocikla.registarskeTablice = switchNoveRegistarskeTabliceZaMotocikl.IsToggled;
+                dodatneOpcijeZaRegMotocikla.potvrdaOVlasnistvu = switchPotvrdaOVlasnistvuZaMotocikl.IsToggled;
+                dodatneOpcijeZaRegMotocikla.potvrdaORegistraciji = switchPotvrdaORegistracijiZaMotocikl.IsToggled;
+                dodatneOpcijeZaRegMotocikla.izgubljeneTablice = switchIzgubljeneTabliceZaMotocikl.IsToggled;
 
-            await Navigation.PushAsync(new KalkulatorMotocikli2(motocikl1, dodatneOpcijeZaRegMotocikla));
-
+                await Navigation.PushAsync(new KalkulatorMotocikli2(motocikl1, dodatneOpcijeZaRegMotocikla));
+            }
+            catch
+            {
+                await DisplayAlert("Upozorenje", "Sva polja moraju biti ispunjena!", "OK");
+            }
 
 
 
