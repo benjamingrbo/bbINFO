@@ -14,7 +14,7 @@
             <Label x:Name="naziv" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold" CharacterSpacing="0.5" Margin="0,15,0,0" FontFamily="Roboto.ttf#Roboto" />
             <Label x:Name="adresa" Text="Adresa : " HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
             <Label x:Name="brojTelefona" Text="Broj telefona : " HorizontalOptions="CenterAndExpand" FontSize="Body" FontFamily="Roboto.ttf#Roboto"/>
-            <Grid Margin="0,50,0,0">
+            <Grid Margin="0,50,0,0" VerticalOptions="EndAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
