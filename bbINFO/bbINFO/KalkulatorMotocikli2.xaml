@@ -3,133 +3,135 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="bbINFO.KalkulatorMotocikli2">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="auto" />
-                </Grid.ColumnDefinitions>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
 
-                <Label Text="OSIGURANJE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="0" Grid.Column="0" Padding="5,0,0,0" HorizontalOptions="Start"/>
-                <Label x:Name="polisaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="OSIGURANJE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="0" Grid.Column="0" Padding="5,0,0,0" HorizontalOptions="Start"/>
+                    <Label x:Name="polisaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-                <Label Text="BIHAMK" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="2" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="bihamkIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="2" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="FOND ZA ZAŠTITU VODA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="4" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="vodoprivreda"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="4" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="BIHAMK" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="2" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="bihamkIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="2" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-                <Label Text="POREZ NA MOTORNO VOZILO" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="6" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="porezIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="6" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="PUTARINA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="8" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="putarinaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="8" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="FOND ZA ZAŠTITU VODA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="4" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="vodoprivreda"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="4" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-                <Label Text="FOND ZA ZAŠTITU OKOLIŠA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="10" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="okolisIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="10" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="NOVE REGISTARSKE TABLICE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="12" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="noveTabliceIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="12" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="POREZ NA MOTORNO VOZILO" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="6" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="porezIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="6" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-                <Label Text="IZGUBLJENE/OŠTEĆENE REGISTARSKE TABLICE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="14" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="izgubljeneTabliceIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="14" Grid.Column="1" HorizontalOptions="EndAndExpand"  Padding="0,0,5,0" VerticalOptions="CenterAndExpand"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="POTVRDA O REGISTRACIJI" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="16" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="potvrdaORegistracijiIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="16" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="PUTARINA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="8" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="putarinaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="8" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-
-                <Label Text="POTVRDA O VLASNIŠTVU" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="18" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="potvrdaOVlasnistvuIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="18" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="STIKER" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="20" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="stikerIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="20" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="FOND ZA ZAŠTITU OKOLIŠA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="10" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="okolisIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="10" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-
-                <Label Text="TEHNIČKI PREGLED" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="22" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="tehnickiIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="22" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="23" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-                <Label Text="TAKSA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="24" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="taksaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="24" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+                    <Label Text="NOVE REGISTARSKE TABLICE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="12" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="noveTabliceIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="12" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
 
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="25" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-                <Label Text="ZELENI KARTON" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="26" Grid.Column="0" Padding="5,0,0,0"/>
-                <Label x:Name="zeleniKartonIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="26" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
-
-                <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="27" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-                <Label Text="UKUPNO" FontSize="16" FontFamily="Roboto.ttf#Roboto" FontAttributes="Bold" Grid.Row="28" Grid.Column="0" Padding="5,0,0,0" TextColor="Black"/>
-                <Label x:Name="ukupnaIspis" FontSize="18" FontFamily="Roboto.ttf#Roboto" FontAttributes="Bold" Grid.Row="28" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0" TextColor="Black"/>
-
-            </Grid>
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"/>
 
 
-        </StackLayout>
+                    <Label Text="IZGUBLJENE/OŠTEĆENE REGISTARSKE TABLICE" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="14" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="izgubljeneTabliceIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="14" Grid.Column="1" HorizontalOptions="EndAndExpand"  Padding="0,0,5,0" VerticalOptions="CenterAndExpand"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+                    <Label Text="POTVRDA O REGISTRACIJI" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="16" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="potvrdaORegistracijiIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="16" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+
+                    <Label Text="POTVRDA O VLASNIŠTVU" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="18" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="potvrdaOVlasnistvuIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="18" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+                    <Label Text="STIKER" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="20" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="stikerIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="20" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+                    <Label Text="TEHNIČKI PREGLED" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="22" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="tehnickiIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="22" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="23" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+                    <Label Text="TAKSA" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="24" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="taksaIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="24" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="25" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                    <Label Text="ZELENI KARTON" FontSize="15" FontFamily="Roboto.ttf#Roboto" Grid.Row="26" Grid.Column="0" Padding="5,0,0,0"/>
+                    <Label x:Name="zeleniKartonIspis"  FontSize="16" FontFamily="Roboto.ttf#Roboto" Grid.Row="26" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0"/>
+
+                    <BoxView HeightRequest="1" Color="#5561F9" Grid.Row="27" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                    <Label Text="UKUPNO" FontSize="16" FontFamily="Roboto.ttf#Roboto" FontAttributes="Bold" Grid.Row="28" Grid.Column="0" Padding="5,0,0,0" TextColor="Black"/>
+                    <Label x:Name="ukupnaIspis" FontSize="18" FontFamily="Roboto.ttf#Roboto" FontAttributes="Bold" Grid.Row="28" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0,0,5,0" TextColor="Black"/>
+
+                </Grid>
+
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
