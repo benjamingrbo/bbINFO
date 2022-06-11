@@ -9,7 +9,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-                <Image Source="bb2crop.png" HeightRequest="250"/>
+                <Image Source="bbinfo3.png" Margin="0,40,0,40" HeightRequest="120" WidthRequest="240"/>
             </ListView.Header>
       <ListView.ItemTemplate>
         <DataTemplate>

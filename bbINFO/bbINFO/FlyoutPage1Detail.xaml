@@ -7,8 +7,8 @@
   <StackLayout Padding="35">
         <Label Text="Dobro došli na aplikaciju " FontSize="Large" FontFamily="Roboto.ttf#Roboto" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
         <StackLayout VerticalOptions="Center">
-            <Image Source="bbpng2.png" VerticalOptions="Center" WidthRequest="280" HeightRequest="280"/>
-        <Label HorizontalOptions="Center" Text="Upotrebom ove aplikacije imate mogućnost izračunati cijenu registracije Vašeg motornog vozila, kao i izvršiti uvid u sve stanice tehničkog pregleda i osiguravajuće kuće u Vašem gradu" 
+            <Image Source="detail.png" VerticalOptions="Center" WidthRequest="280" HeightRequest="280" Margin="0,50,0,0"/>
+        <Label Margin="0,-70,0,0" TextColor="Black" HorizontalOptions="Center" Text="Upotrebom ove aplikacije imate mogućnost izračunati cijenu registracije Vašeg motornog vozila, kao i izvršiti uvid u sve stanice tehničkog pregleda i osiguravajuće kuće u Vašem gradu" 
                           FontFamily="Roboto.ttf#Roboto"
                           FontSize="15" HorizontalTextAlignment="Center" VerticalOptions="Center" />
         </StackLayout>

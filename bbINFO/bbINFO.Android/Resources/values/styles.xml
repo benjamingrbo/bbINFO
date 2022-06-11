@@ -22,4 +22,11 @@
   </style>
 	<color name="ListViewSelected">#dcdcdc</color>
 	<color name="ListViewHighlighted">#dcdcdc</color>
+	<style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowBackground">@drawable/splash</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBar">true</item>
+	</style>
 </resources>
